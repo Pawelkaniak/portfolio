@@ -1,0 +1,13 @@
+{
+  "name": "myPortfolio",
+  "version": "0.0.1",
+  "description": "my portfolio ",
+  "main": "app.js",
+  "repository": "https://github.com/Pawelkaniak/portfolio.git",
+  "author": "Pawelkaniak <pawkaniak@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "pug": "^2.0.3"
+  }
+}
