@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = {
+    mode: 'none',
     entry: "./public/js/app.js",
     output: {
         path: __dirname + "/public/js/",
@@ -12,10 +13,10 @@ module.exports = {
                 exclude: /(node_modules)/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['env']
+                    presets: ["env", "react"]
                 }
             }
         ]
     },
     watch: true
-}
+};

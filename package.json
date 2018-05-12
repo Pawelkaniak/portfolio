@@ -12,13 +12,16 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
     "webpack": "^4.8.2",
     "webpack-cli": "^2.1.3"
   }
