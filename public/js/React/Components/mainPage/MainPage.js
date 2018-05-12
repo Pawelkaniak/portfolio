@@ -6,7 +6,6 @@ class MainPage extends React.Component {
         return(
             <div>
                 <h1>MainPage</h1>
-                <h1>MainPage</h1>
                 <Link to='/contact'> Go to contact! </Link>
             </div>
         );
