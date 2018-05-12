@@ -24167,6 +24167,11 @@ var MainPage = function (_React$Component) {
                     'MainPage'
                 ),
                 _react2.default.createElement(
+                    'h1',
+                    null,
+                    'MainPage'
+                ),
+                _react2.default.createElement(
                     _reactRouterDom.Link,
                     { to: '/contact' },
                     ' Go to contact! '
