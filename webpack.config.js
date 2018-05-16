@@ -1,4 +1,5 @@
 const path = require('path');
+//const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'none',
@@ -10,8 +11,12 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/,
                 exclude: /(node_modules)/,
-                loader: 'babel-loader',
+                //use: 
+               // {
+                    loader: 'babel-loader', 
+              //  },
                 query: {
                     presets: ["env", "react"]
                 }
