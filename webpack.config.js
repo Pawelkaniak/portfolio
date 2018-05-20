@@ -1,27 +1,30 @@
 const path = require('path');
-//const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'none',
-    entry: "./src/js/React/app.js",
+    entry: "./src/js/React/App.js",
     output: {
-        path: __dirname + "/public/js/",
-        filename: "bundle.js"
+        path: path.join(__dirname + "/public/js/"),
+        filename: "bundle.js",
+        publicPath: '/js/'
     },
     module: {
         rules: [
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
-                //use: 
-               // {
-                    loader: 'babel-loader', 
-              //  },
+                loader: 'babel-loader', 
                 query: {
-                    presets: ["env", "react"]
+                    presets: ["react", "env" ,"stage-0"]
                 }
             }
         ]
     },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html'
+        })
+    ],
     watch: true
 };
