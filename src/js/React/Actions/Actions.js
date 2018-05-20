@@ -1,10 +1,12 @@
+import * as constants from '../Constants'
+
 /*
 * action creators
 */
 
-export function CounterAction() {
+export function TestAction() {
     return {
-         type: "Add" 
-        }
+        type: constants.EVENTS_TEST
+    }
 }
 

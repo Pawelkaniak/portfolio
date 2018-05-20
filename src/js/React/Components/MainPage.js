@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { PropTypes } from 'react'
 import { connect } from 'react-redux';
+import * as constants from '../Constants'
+import { TestAction } from '../Actions/Actions'
+
 
 class MainPage extends React.Component {
-    
+    constructor(props) {
+        super(props);
+    }
 
     onTest() {
-        console.log('test1');
+        this.props.testClick();
     }
     render() {
         console.log(this.props.TestReducer.test)
-        return(
+        return (
             <div>
-                <div> 
+                <h1>MainPage</h1>
+                <div>
                     <button onClick={this.onTest.bind(this)}>
                         Testujemy
                     </button>
                 </div>
-                MainPage
+            
             </div>
         );
     }
@@ -24,14 +30,14 @@ class MainPage extends React.Component {
 
 const mapStateToProps = (state) => {
     return { ...state };
-  };
+};
 
-  const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
-     
+        testClick: () => { dispatch(TestAction(constants.EVENTS_TEST)) }
     };
-  };
+};
 
 
-  export default connect(mapStateToProps, mapDispatchToProps)(MainPage);
+export default connect(mapStateToProps, mapDispatchToProps)(MainPage);
 

@@ -7,7 +7,7 @@ const initialState = {
 function TestReducer(state = initialState, action) {
     switch (action.type) {
         case constants.EVENTS_TEST:
-            return { ...state, test: true };
+            return { ...state, test: !state.test };
         default:
             return state;
     }

@@ -19791,7 +19791,7 @@ function TestReducer() {
 
     switch (action.type) {
         case constants.EVENTS_TEST:
-            return _extends({}, state, { test: true });
+            return _extends({}, state, { test: !state.test });
         default:
             return state;
     }
@@ -26363,6 +26363,14 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(30);
 
+var _Constants = __webpack_require__(29);
+
+var constants = _interopRequireWildcard(_Constants);
+
+var _Actions = __webpack_require__(105);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26374,16 +26382,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var MainPage = function (_React$Component) {
     _inherits(MainPage, _React$Component);
 
-    function MainPage() {
+    function MainPage(props) {
         _classCallCheck(this, MainPage);
 
-        return _possibleConstructorReturn(this, (MainPage.__proto__ || Object.getPrototypeOf(MainPage)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (MainPage.__proto__ || Object.getPrototypeOf(MainPage)).call(this, props));
     }
 
     _createClass(MainPage, [{
         key: 'onTest',
         value: function onTest() {
-            console.log('test1');
+            this.props.testClick();
         }
     }, {
         key: 'render',
@@ -26393,6 +26401,11 @@ var MainPage = function (_React$Component) {
                 'div',
                 null,
                 _react2.default.createElement(
+                    'h1',
+                    null,
+                    'MainPage'
+                ),
+                _react2.default.createElement(
                     'div',
                     null,
                     _react2.default.createElement(
@@ -26400,8 +26413,7 @@ var MainPage = function (_React$Component) {
                         { onClick: this.onTest.bind(this) },
                         'Testujemy'
                     )
-                ),
-                'MainPage'
+                )
             );
         }
     }]);
@@ -26414,10 +26426,42 @@ var mapStateToProps = function mapStateToProps(state) {
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
-    return {};
+    return {
+        testClick: function testClick() {
+            dispatch((0, _Actions.TestAction)(constants.EVENTS_TEST));
+        }
+    };
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(MainPage);
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.TestAction = TestAction;
+
+var _Constants = __webpack_require__(29);
+
+var constants = _interopRequireWildcard(_Constants);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+/*
+* action creators
+*/
+
+function TestAction() {
+    return {
+        type: constants.EVENTS_TEST
+    };
+}
 
 /***/ })
 /******/ ]);
