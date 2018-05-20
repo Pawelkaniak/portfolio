@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux';
-import * as constants from '../Constants'
-import { TestAction } from '../Actions/Actions'
+import * as constants from '../../Constants'
+import { TestAction } from '../../Actions/Actions'
 
 
 class MainPage extends React.Component {
@@ -13,7 +13,6 @@ class MainPage extends React.Component {
         this.props.testClick();
     }
     render() {
-        console.log(this.props.TestReducer.test)
         return (
             <div>
                 <h1>MainPage</h1>
@@ -21,8 +20,16 @@ class MainPage extends React.Component {
                     <button onClick={this.onTest.bind(this)}>
                         Testujemy
                     </button>
+                    {
+                        this.props.TestReducer.test ?
+                            (<div>
+                               <h1> Pojawiam się i znikam </h1>
+                            </div>)
+                            :
+                            null
+                    }
                 </div>
-            
+
             </div>
         );
     }
