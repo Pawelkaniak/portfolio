@@ -23,7 +23,7 @@ npm manifest:
     "author": "Pawelkaniak <pawkaniak@gmail.com>",
     "license": "MIT",
     "scripts": {
-      "start": "webpack --mode development --open",
+      "start": "yarn install webpack --mode development --open",
       "build": "webpack --mode production"
     },
     "dependencies": {
@@ -7265,7 +7265,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c webpack --mode development --open
+  Arguments: -c yarn install webpack --mode development --open
   Directory: /home/paka/Dokumenty/www/myPortfolio
   Output:
   
