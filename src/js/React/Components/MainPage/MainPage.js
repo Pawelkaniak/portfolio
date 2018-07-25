@@ -5,9 +5,7 @@ import { TestAction } from '../../Actions/Actions'
 
 
 class MainPage extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+
 
     onTest() {
         this.props.testClick();
@@ -18,12 +16,12 @@ class MainPage extends React.Component {
                 <h1>MainPage</h1>
                 <div>
                     <button onClick={this.onTest.bind(this)}>
-                        Testujemy
+                        ToggleButton
                     </button>
                     {
                         this.props.TestReducer.test ?
                             (<div>
-                               <h1> Pojawiam się i znikam </h1>
+                               <h1> TestButton </h1>
                             </div>)
                             :
                             null
@@ -41,7 +39,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        testClick: () => { dispatch(TestAction(constants.EVENTS_TEST)) }
+        testClick: () => {dispatch(TestAction(constants.EVENTS_TEST))}
     };
 };
 
