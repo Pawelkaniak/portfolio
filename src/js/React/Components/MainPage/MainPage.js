@@ -3,17 +3,24 @@ import { connect } from 'react-redux';
 import * as constants from '../../Constants'
 import { TestAction } from '../../Actions/Actions'
 
+const styles = require('./mainPage.scss');
 
 class MainPage extends React.Component {
+    state = {
+        isTextVisible: false
+    }
 
 
     onTest() {
         this.props.testClick();
+        this.setState(prevState => ({
+            isTextVisible: !prevState.isTextVisible
+        }))
     }
     render() {
         return (
             <div>
-                <h1>MainPage</h1>
+                <h1 className={this.state.isTextVisible ? styles.btnRed : styles.btnBlack }>MainPage</h1>
                 <div>
                     <button onClick={this.onTest.bind(this)}>
                         ToggleButton
@@ -27,7 +34,6 @@ class MainPage extends React.Component {
                             null
                     }
                 </div>
-
             </div>
         );
     }

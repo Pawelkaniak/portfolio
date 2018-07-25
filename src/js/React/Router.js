@@ -13,7 +13,6 @@ const RouterApp = () => {
   return (
     <Router>
       <div>
-
         <ul>
           <li>
             <NavLink exact to="/" activeStyle={{ fontWeight: 'bolder' }}>Strona domowa</NavLink>
