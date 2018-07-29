@@ -21,9 +21,9 @@ class MainPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={styles.container}>
                 <h1 className={this.state.isBoxVisible ? styles.btnRed : styles.btnBlack }>MainPage</h1>
-                <div>
+                <div className={styles.wrapper}>
                     <button onClick={this.onTest.bind(this)}>
                         ToggleButton
                     </button>
