@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack --mode development --open",
     "build": "webpack --mode production",
-    "test": "webpack --entry ./src/js/React/App.js"
+    "dev": "webpack webpack-dev-server"
   },
   "dependencies": {
     "express": "^4.16.3",

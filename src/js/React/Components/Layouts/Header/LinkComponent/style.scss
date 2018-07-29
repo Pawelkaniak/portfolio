@@ -1,0 +1,19 @@
+container {
+    width: 300px;
+}
+
+.link {
+    color:  #111111;
+    min-width: 150px;
+    margin: 10px;
+    padding: 5px 10px; 
+    display: block;
+    text-align: center;
+    border: 1px solid #111111;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+        border-color: #777;
+        color: #777;
+    }
+}
