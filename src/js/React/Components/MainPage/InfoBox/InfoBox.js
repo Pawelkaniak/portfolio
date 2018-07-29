@@ -4,6 +4,8 @@ const styles = require('./style.scss')
 
 class InfoBox extends React.Component {
 
+
+    
     render() {
         return (
             <div className={styles.container}>

@@ -1,7 +1,4 @@
 const path = require('path');
-//const HtmlWebpackPlugin = require('html-webpack-plugin');
-//const postcssAssets = require('postcss-assets');
-//const postcssNext = require('postcss-cssnext');
 
 module.exports = {
     mode: 'none',
@@ -15,6 +12,7 @@ module.exports = {
         extensions: [ '.js', '.json', '.css', '.scss' ],
         modules: ['node_modules']    
     },
+    
     module: {
         rules: [
             {
@@ -46,10 +44,10 @@ module.exports = {
             },
         ],
     },
-//    plugins: [
-//       new HtmlWebpackPlugin({
-//            template: './src/index.html'
-//        }),
-//    ],
+    devServer: {
+        contentBase: path.join(__dirname + "/js/bundle.js"),
+        compress: true,
+        port: 9000
+      },
     watch: true
 };
