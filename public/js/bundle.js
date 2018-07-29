@@ -71,6 +71,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/css-loader/index.js??ref--5-1!./node_modules/sass-loader/lib/loader.js!./src/js/React/Components/Layouts/Header/style.scss":
+/*!****************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--5-1!./node_modules/sass-loader/lib/loader.js!./src/js/React/Components/Layouts/Header/style.scss ***!
+  \****************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../../../../../node_modules/css-loader/lib/css-base.js */ \"./node_modules/css-loader/lib/css-base.js\")(false);\n// imports\n\n\n// module\nexports.push([module.i, \"container {\\n  width: 100%; }\\n\\n.style_title_3tRCL {\\n  text-align: center; }\\n\", \"\"]);\n\n// exports\nexports.locals = {\n\t\"title\": \"style_title_3tRCL\"\n};\n\n//# sourceURL=webpack:///./src/js/React/Components/Layouts/Header/style.scss?./node_modules/css-loader??ref--5-1!./node_modules/sass-loader/lib/loader.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js??ref--5-1!./node_modules/sass-loader/lib/loader.js!./src/js/React/Components/MainPage/InfoBox/style.scss":
 /*!******************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--5-1!./node_modules/sass-loader/lib/loader.js!./src/js/React/Components/MainPage/InfoBox/style.scss ***!
@@ -1344,6 +1355,29 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});
 
 /***/ }),
 
+/***/ "./src/js/React/Components/Layouts/Header/Header.js":
+/*!**********************************************************!*\
+  !*** ./src/js/React/Components/Layouts/Header/Header.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n    value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterDom = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/es/index.js\");\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar styles = __webpack_require__(/*! ./style.scss */ \"./src/js/React/Components/Layouts/Header/style.scss\");\n\nvar InfoBox = function (_React$Component) {\n    _inherits(InfoBox, _React$Component);\n\n    function InfoBox() {\n        _classCallCheck(this, InfoBox);\n\n        return _possibleConstructorReturn(this, (InfoBox.__proto__ || Object.getPrototypeOf(InfoBox)).apply(this, arguments));\n    }\n\n    _createClass(InfoBox, [{\n        key: 'render',\n        value: function render() {\n            return _react2.default.createElement(\n                'div',\n                { className: styles.container },\n                _react2.default.createElement(\n                    'h1',\n                    { className: styles.title },\n                    'Welcome on my page!'\n                ),\n                _react2.default.createElement(\n                    'ul',\n                    null,\n                    _react2.default.createElement(\n                        'li',\n                        null,\n                        _react2.default.createElement(\n                            _reactRouterDom.NavLink,\n                            { exact: true, to: '/', activeStyle: { fontWeight: 'bolder' } },\n                            'Strona domowa'\n                        )\n                    ),\n                    _react2.default.createElement(\n                        'li',\n                        null,\n                        _react2.default.createElement(\n                            _reactRouterDom.NavLink,\n                            { to: '/about', activeStyle: { fontWeight: 'bolder' } },\n                            'O stronie'\n                        )\n                    )\n                )\n            );\n        }\n    }]);\n\n    return InfoBox;\n}(_react2.default.Component);\n\nexports.default = InfoBox;\n\n//# sourceURL=webpack:///./src/js/React/Components/Layouts/Header/Header.js?");
+
+/***/ }),
+
+/***/ "./src/js/React/Components/Layouts/Header/style.scss":
+/*!***********************************************************!*\
+  !*** ./src/js/React/Components/Layouts/Header/style.scss ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../../../../../node_modules/css-loader??ref--5-1!../../../../../../node_modules/sass-loader/lib/loader.js!./style.scss */ \"./node_modules/css-loader/index.js??ref--5-1!./node_modules/sass-loader/lib/loader.js!./src/js/React/Components/Layouts/Header/style.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(false) {}\n\n//# sourceURL=webpack:///./src/js/React/Components/Layouts/Header/style.scss?");
+
+/***/ }),
+
 /***/ "./src/js/React/Components/MainPage/InfoBox/InfoBox.js":
 /*!*************************************************************!*\
   !*** ./src/js/React/Components/MainPage/InfoBox/InfoBox.js ***!
@@ -1434,7 +1468,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterDom = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/es/index.js\");\n\nvar _MainPage = __webpack_require__(/*! ./Components/MainPage/MainPage */ \"./src/js/React/Components/MainPage/MainPage.js\");\n\nvar _MainPage2 = _interopRequireDefault(_MainPage);\n\nvar _About = __webpack_require__(/*! ./Components/About/About */ \"./src/js/React/Components/About/About.js\");\n\nvar _About2 = _interopRequireDefault(_About);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Components\nvar RouterApp = function RouterApp() {\n  return _react2.default.createElement(\n    _reactRouterDom.BrowserRouter,\n    null,\n    _react2.default.createElement(\n      'div',\n      null,\n      _react2.default.createElement(\n        'ul',\n        null,\n        _react2.default.createElement(\n          'li',\n          null,\n          _react2.default.createElement(\n            _reactRouterDom.NavLink,\n            { exact: true, to: '/', activeStyle: { fontWeight: 'bolder' } },\n            'Strona domowa'\n          )\n        ),\n        _react2.default.createElement(\n          'li',\n          null,\n          _react2.default.createElement(\n            _reactRouterDom.NavLink,\n            { to: '/about', activeStyle: { fontWeight: 'bolder' } },\n            'O stronie'\n          )\n        )\n      ),\n      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _MainPage2.default }),\n      _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })\n    )\n  );\n};\n\nexports.default = RouterApp;\n\n//# sourceURL=webpack:///./src/js/React/Router.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactRouterDom = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/es/index.js\");\n\nvar _Header = __webpack_require__(/*! ./Components/Layouts/Header/Header */ \"./src/js/React/Components/Layouts/Header/Header.js\");\n\nvar _Header2 = _interopRequireDefault(_Header);\n\nvar _MainPage = __webpack_require__(/*! ./Components/MainPage/MainPage */ \"./src/js/React/Components/MainPage/MainPage.js\");\n\nvar _MainPage2 = _interopRequireDefault(_MainPage);\n\nvar _About = __webpack_require__(/*! ./Components/About/About */ \"./src/js/React/Components/About/About.js\");\n\nvar _About2 = _interopRequireDefault(_About);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n// Components\nvar RouterApp = function RouterApp() {\n  return _react2.default.createElement(\n    _reactRouterDom.BrowserRouter,\n    null,\n    _react2.default.createElement(\n      'div',\n      null,\n      _react2.default.createElement(_Header2.default, null),\n      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _MainPage2.default }),\n      _react2.default.createElement(_reactRouterDom.Route, { path: '/about', component: _About2.default })\n    )\n  );\n};\n\n//LayoutParts\nexports.default = RouterApp;\n\n//# sourceURL=webpack:///./src/js/React/Router.js?");
 
 /***/ })
 

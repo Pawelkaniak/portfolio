@@ -1,9 +1,11 @@
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Route,
-  NavLink
+  Route
 } from 'react-router-dom';
+
+//LayoutParts
+import Header from './Components/Layouts/Header/Header'
 
 // Components
 import MainPage from './Components/MainPage/MainPage';
@@ -13,14 +15,7 @@ const RouterApp = () => {
   return (
     <Router>
       <div>
-        <ul>
-          <li>
-            <NavLink exact to="/" activeStyle={{ fontWeight: 'bolder' }}>Strona domowa</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about" activeStyle={{ fontWeight: 'bolder' }}>O stronie</NavLink>
-          </li>
-        </ul>
+        <Header/>
         {/* router paths components */}
         <Route exact path="/" component={MainPage} />
         <Route path="/about" component={About} />
