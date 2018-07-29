@@ -21,8 +21,6 @@ const RouterApp = () => {
             <NavLink to="/about" activeStyle={{ fontWeight: 'bolder' }}>O stronie</NavLink>
           </li>
         </ul>
-
-
         {/* router paths components */}
         <Route exact path="/" component={MainPage} />
         <Route path="/about" component={About} />
