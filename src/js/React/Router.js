@@ -9,7 +9,8 @@ import Header from './Components/Layouts/Header/Header'
 
 // Components
 import MainPage from './Components/MainPage/MainPage';
-import About from './Components/About/About';
+import Weather from './Components/Weather/Weather';
+//import About from './Components/About/About';
 
 const RouterApp = () => {
   return (
@@ -18,7 +19,7 @@ const RouterApp = () => {
         <Header/>
         {/* router paths components */}
         <Route exact path="/" component={MainPage} />
-        <Route path="/about" component={About} />
+        <Route path="/weather" component={Weather} />
       </div>
     </Router>
   )

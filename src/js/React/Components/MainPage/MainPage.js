@@ -22,11 +22,15 @@ class MainPage extends React.Component {
     render() {
         return (
             <div className={styles.container}>
-                <h1 className={this.state.isBoxVisible ? styles.btnRed : styles.btnBlack }>MainPage</h1>
+                <h1 className={this.state.isBoxVisible ? styles.btnRed : styles.btnBlack}>
+                    Witaj
+                </h1>
                 <div className={styles.wrapper}>
-                    <button onClick={this.onTest.bind(this)}>
-                        ToggleButton
+                    <div className={styles.helloBtnWrap}>
+                        <button className={styles.helloBtn} onClick={this.onTest.bind(this)}>
+                            Kliknij
                     </button>
+                    </div>
                     {
                         this.props.TestReducer.test ?
                             <InfoBox
@@ -47,7 +51,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        testClick: () => {dispatch(TestAction(constants.EVENTS_TEST))}
+        testClick: () => { dispatch(TestAction(constants.EVENTS_TEST)) }
     };
 };
 

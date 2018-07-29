@@ -16,11 +16,11 @@ class InfoBox extends React.Component {
                 key: 0
             },
             about: {
-                name: 'O stronie',
-                url: '/about',
+                name: 'Pogoda',
+                url: '/weather',
                 exact: false,
                 key: 1
-            }
+            },
         }
         return (
             <div className={styles.container}>
