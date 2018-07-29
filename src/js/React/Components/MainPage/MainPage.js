@@ -4,7 +4,7 @@ import * as constants from '../../Constants'
 import { TestAction } from '../../Actions/Actions'
 import InfoBox from './InfoBox/InfoBox';
 
-const styles = require('./mainPage.scss');
+const styles = require('./style.scss');
 
 class MainPage extends React.Component {
     state = {
@@ -23,12 +23,12 @@ class MainPage extends React.Component {
         return (
             <div className={styles.container}>
                 <h1 className={this.state.isBoxVisible ? styles.btnRed : styles.btnBlack}>
-                    Witaj
+                    Welcome
                 </h1>
                 <div className={styles.wrapper}>
                     <div className={styles.helloBtnWrap}>
                         <button className={styles.helloBtn} onClick={this.onTest.bind(this)}>
-                            Kliknij
+                            Click!
                     </button>
                     </div>
                     {

@@ -10,13 +10,13 @@ class InfoBox extends React.Component {
     render() {
         const urls = {
             main: {
-                name: 'Strona domowa',
+                name: 'Main page',
                 url: '/',
                 exact: true,
                 key: 0
             },
             about: {
-                name: 'Pogoda',
+                name: 'Weather',
                 url: '/weather',
                 exact: false,
                 key: 1

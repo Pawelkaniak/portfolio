@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: wrap;
+}
+
+
+.formWrapper {
+    text-align: center;
+    margin: 0 0 0 50px;
+}
