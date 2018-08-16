@@ -29,7 +29,7 @@ class Weather extends React.Component {
                 error: '',
                 location: data.name,
                 country: data.sys.country,
-                temp: Math.round(data.main.temp),
+                temp: (Math.round(data.main.temp) - 273.15).toString().substr(0, 4),
                 pressure: data.main.pressure,
                 decription: data.weather[0].description,
                 icon: data.weather[0].icon,
@@ -58,6 +58,7 @@ class Weather extends React.Component {
     }
 
     render() {
+        console.log(this.state.url)
         return (
             <div>
                 <div className={styles.container}>
